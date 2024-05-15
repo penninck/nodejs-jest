@@ -1,0 +1,27 @@
+{
+  "name": "pkg-jest",
+  "version": "1.0.0",
+  "description": "Framework NodeJS e Jest ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/penninck/nodejs.git"
+  },
+  "keywords": [
+    "nodejs",
+    "jest",
+    "githubactions"
+  ],
+  "author": "Geandre Penninck",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/penninck/nodejs/issues"
+  },
+  "homepage": "https://github.com/penninck/nodejs#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
