@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - dev
+      - hml
 
 jobs:
   build-and-test:
