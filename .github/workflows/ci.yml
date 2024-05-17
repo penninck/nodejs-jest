@@ -31,7 +31,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Local dos Artefatos
-          path: tests/
           path: dist/
 
   build-hml:
