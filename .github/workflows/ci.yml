@@ -23,10 +23,14 @@ jobs:
 
       - name: Instala as Dependências
         run: npm install
-      - name: Run tests
+
+      - name: Executa os Testes
         run: npm test
 
-      - name: Upload build artifacts
+      - name: Build do Projeto
+        run: npm run build
+
+      - name: Upload dos Artefatos
         uses: actions/upload-artifact@v3
         with:
           name: build-artifacts
