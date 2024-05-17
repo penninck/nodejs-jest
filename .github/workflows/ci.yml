@@ -30,8 +30,9 @@ jobs:
       - name: Upload dos Artefatos
         uses: actions/upload-artifact@v4
         with:
-          name: build-artifacts
+          name: Local dos Artefatos
           path: tests/
+          path: dist/
 
   build-hml:
     runs-on: ubuntu-latest
