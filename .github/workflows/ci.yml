@@ -27,9 +27,6 @@ jobs:
       - name: Executa os Testes
         run: npm test
 
-      - name: Build do Projeto
-        run: npm run build
-
       - name: Upload dos Artefatos
         uses: actions/upload-artifact@v3
         with:
