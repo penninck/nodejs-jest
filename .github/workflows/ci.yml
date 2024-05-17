@@ -8,24 +8,29 @@ on:
       - hml
 
 jobs:
-  build-and-test:
+  build-test-artefato-dev:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/dev'
 
     steps:
-      - name: Checkout repository
+      - name: Checkout do Repositorio
         uses: actions/checkout@v4
 
-      - name: Use Node.js
+      - name: Configurar o NodeJS 20.0
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 20.0
 
-      - name: Install dependencies
+      - name: Instala as Dependências
         run: npm install
-
       - name: Run tests
         run: npm test
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifacts
+          path: dist/
 
   build-hml:
     runs-on: ubuntu-latest
