@@ -31,7 +31,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: build-artifacts
-          path: dist/
+          path: tests/
 
   build-hml:
     runs-on: ubuntu-latest
