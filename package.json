@@ -1,7 +1,7 @@
 {
   "name": "pkg-jest",
   "version": "1.0.0",
-  "description": "Framework NodeJS e Jest ",
+  "description": "Framework NodeJS MVP ",
   "main": "index.js",
   "scripts": {
     "test": "jest",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/penninck/nodejs.git"
+    "url": "git+https://github.com/penninck/nodejs-mvp.git"
   },
   "keywords": [
     "nodejs",
@@ -19,9 +19,9 @@
   "author": "Geandre Penninck",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/penninck/nodejs/issues"
+    "url": "https://github.com/penninck/nodejs-mvp/issues"
   },
-  "homepage": "https://github.com/penninck/nodejs#readme",
+  "homepage": "https://github.com/penninck/nodejs-mvp#readme",
   "dependencies": {
     "express": "^4.19.2"
   },
