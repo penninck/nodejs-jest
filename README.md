@@ -7,6 +7,7 @@
     Setup NodeJS 20 e 22
     Codespaces
     Teste com Jest
+    Babel
 
 # Estrategia de Ambientes e Branch
     São 03 Branch: [main, dev, hml] 
