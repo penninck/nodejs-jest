@@ -1,0 +1,38 @@
+name: Pipeline do Ambiente de Produção
+
+on:
+    push:
+      branches:
+        - main
+
+jobs:
+  build-test-artefato-producao:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do Repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar o NodeJS 20.0
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.0
+
+      - name: Instala as Dependências
+        run: npm install
+
+      - name: Executa os Testes
+        run: npm test
+        
+        
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: production
+    steps:
+      - name: Checkout do Repositorio
+      uses: actions/checkout@v4
+
+      - name: Build do Projeto
+      run: npm run build
