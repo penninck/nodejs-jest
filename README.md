@@ -4,6 +4,9 @@
     São 02 ambientes de Produção e Desenvolvimento e 
     03 branch sendo: main, dev e hml; 
     As branch de main e dev, utilizam os ambientes de Produção e Desenvolvimento, e branch de hml não utliza ambiente;
+    O Pipeline gera os artefatos e salva na release do GitHub
+    usando o Babel para transpilar o código
+    Build com o webpack
    
 # Ferramentas
     Repo GitHub
