@@ -1,0 +1,23 @@
+name: Pipeline do Ambiente de HML - Ultima versão do Node
+
+on:
+  push:
+    branches:
+      - hml
+
+jobs:
+  build-node-latest-hml:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/hml'
+
+    steps:
+    - name: Checkout do Repositorio
+      uses: actions/checkout@v4
+
+    - name: Configurar o NodeJS 22.2.0
+      uses: actions/setup-node@v4
+      with:
+        node-version: 22.2.0
+
+    - name: Instala as Dependências
+      run: npm install

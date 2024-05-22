@@ -1,16 +1,15 @@
-name: CI Pipeline NodeJS e Jest
+name: Pipeline do Ambiente de Produção
 
 on:
   push:
     branches:
       - main
       - dev
-      - hml
 
 jobs:
-  build-test-artefato-dev:
+  build-test-artefato-producao:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/dev'
+    if: github.ref == 'refs/heads/main'
 
     steps:
       - name: Checkout do Repositorio
@@ -24,7 +23,7 @@ jobs:
       - name: Instala as Dependências
         run: npm install
 
-      - name: Build project
+      - name: Build do Projeto
         run: npm run build
 
       - name: Executa os Testes
@@ -35,19 +34,3 @@ jobs:
         with:
           name: Local dos Artefatos
           path: dist/
-
-  build-hml:
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/hml'
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-
-    - name: Use Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: 20
-
-    - name: Install dependencies
-      run: npm install
